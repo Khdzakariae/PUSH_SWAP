@@ -1,37 +1,29 @@
-FLAGS = -Wall -Wextra -Werror
 
 NAME = push_swap
 
-SRC_1_2	 = push_swap.c
-
+FLAGS = -Wall -Wextra -Werror
 LIBFT = libft/libft.a
+FT_PRINTF = ft_printf/libftprintf.a
 
-OBJ = $(SRC_1_2:.c=.o)
+all: lib $(NAME)
+	@echo  "push_swap done [ ✅ ]"  
 
-all: $(LIBFT) $(NAME)
-	@echo "PUSH_SWAP DONE [✅]"
+$(NAME) : push_swap.c
+	@cc $^ $(FLAGS)  $(LIBFT) $(FT_PRINTF) -o push_swap
 
-
-$(LIBFT) :
-	@make -C libft
-
-
-%.o : %.c
-	@cc $(FLAGS) -c $< -o $@
-
-$(NAME): $(OBJ)
-	@ar rc $@ $^
+lib :
+	@make -C ft_printf --no-print-directory
+	@make -C libft --no-print-directory
 
 clean:
-	@echo "CLEAN DONE [✅]"
-	@rm -f $(OBJ) 
-	@make clean -C libft
+	@make clean -C ft_printf --no-print-directory
+	@make clean -C libft --no-print-directory
+	@echo  "clean [ ✅ ]" 
 
+fclean : clean
+	@make clean -C ft_printf --no-print-directory
+	@make clean -C libft --no-print-directory
+	@rm -f  push_swap
+	@echo  "fclean [ ✅ ]" 
 
-fclean: clean
-	@echo "FCLEAN DONE [✅]"
-	@make fclean -C libft
-	@rm -f $(NAME)
-
-re: fclean all
-	@echo "REBUILD DONE [✅]"
+re: clean all
