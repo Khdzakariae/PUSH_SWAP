@@ -15,6 +15,7 @@ int cheack(int *values, int sise, char **av)
             exit(1);
         }
         values[i] = temp;
+        printf("%d\n",values[i]);
         i++;
     }
     return(1);
