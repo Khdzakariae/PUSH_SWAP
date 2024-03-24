@@ -32,11 +32,14 @@ long	ft_atoi(const char *str)
 	{
 		i++;
 	}
-	
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
 		i++;
+	}
+	if (str[i] != '\0')
+	{
+		return(55147483647);
 	}
 	return (result * sign);
 }
