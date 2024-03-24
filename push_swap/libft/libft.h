@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 #include <stdio.h>
+#include <limits.h>
+
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
