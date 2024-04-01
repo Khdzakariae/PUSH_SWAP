@@ -7,7 +7,7 @@ int cheack(int *values, int sise, char **av)
     i = 0;
     while ( i < sise)
     {
-        temp = ft_atoi(av[i + 1]);
+        temp = ft_atoi(av[i]);
         if ((temp) > INT_MAX || temp <= INT_MIN)
         {
             print_error(2);
@@ -15,8 +15,29 @@ int cheack(int *values, int sise, char **av)
             exit(1);
         }
         values[i] = temp;
-        printf("%d\n",values[i]);
+
         i++;
     }
     return(1);
 }
+
+// int cheack_repate(char **av)
+// {
+//     int i = 0;
+//     int j ;
+
+//     while (/* condition */)
+//     {
+//         /* code */
+//     }
+    
+// }
+
+// int main (int ac , char **av)
+// {
+//     if (ac != 1)
+//     {
+//         char
+
+//     }
+// }

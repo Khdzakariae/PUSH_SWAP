@@ -6,6 +6,7 @@ NAME = push_swap
 
 SRC = push_swap.c parcin/parisin1.c parcin/errores.c
 
+# SRC = test.c
 LIBFT = libft/libft.a
 FT_PRINTF = ft_printf/libftprintf.a
 
@@ -30,4 +31,4 @@ fclean : clean
 	@rm -f  push_swap
 	@echo  "fclean [ ✅ ]" 
 
-re: clean all
+re: fclean all

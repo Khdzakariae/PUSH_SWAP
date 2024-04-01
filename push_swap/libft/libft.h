@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:29:02 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/15 12:31:27 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/04/01 00:30:46 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 # include <unistd.h>
 #include <stdio.h>
 #include <limits.h>
+
+typedef struct k_list
+{ 
+    long    content;
+    struct k_list *next; 
+}           t_list;
+
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstnew(long content);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);

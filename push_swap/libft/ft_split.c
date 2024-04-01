@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:16:42 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/15 13:29:14 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/03/25 01:09:41 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = checkwords(s, c) + 1;
+	if (words == 0)
+		return (NULL);
 	ptr = malloc(words * sizeof(char *));
 	if (!ptr)
 		return (NULL);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:04:37 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/12 11:44:04 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/04/01 01:37:41 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ long	ft_atoi(const char *str)
 	result = 0;
 	sign = 1;
 	i = 0;
+	if (!str[i])
+		return(55147483647);
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
 	if (str[i] == '-')
@@ -34,14 +36,12 @@ long	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if ((result * 10) > INT_MAX)
+		if ((result * 10) >= INT_MAX)
 			return(55147483647);
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
 	if (str[i] != '\0')
-	{
 		return(55147483647);
-	}
 	return (result * sign);
 }
