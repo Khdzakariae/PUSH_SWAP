@@ -1,23 +1,48 @@
 #include "../push_swap.h"
+    // _Print(values, sise);
+// void _Print(int *values, int sise)
+// {
+//     int i = 0;
+//     while (i <= sise)
+//     {
+//         printf("the values table |%i|\n",values[i]);
+//         i++;
+//     }
+// }
 
-int cheack(int *values, int sise, char **av)
+int cheack_repet(t_list *data, int sise)
 {
-    int i;
-    long temp;
-    i = 0;
-    while ( i < sise)
-    {
-        temp = ft_atoi(av[i]);
-        if ((temp) > INT_MAX || temp <= INT_MIN)
-        {
-            print_error(2);
-            free(values);
-            exit(1);
-        }
-        values[i] = temp;
+    int *values;
+    int i = 0;
+    int j;
 
+    if (sise == 1)
+        return(0);
+    values = (int *)malloc(sizeof(int) * sise);
+
+    while (i < sise)
+    {
+        values[i] = data->content;
+        data = data->next;
         i++;
     }
+
+    i = 0;
+    while(i < sise)
+    {
+        j = i + 1;
+        while(j < sise)
+        {
+            if (values[i] == values[j])
+            {
+                free(values);
+                print_error(3);
+            }
+            j++;
+        }
+        i++;
+    }
+    free(values);
     return(1);
 }
 

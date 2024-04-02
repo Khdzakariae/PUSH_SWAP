@@ -14,15 +14,17 @@
 #include "libft/libft.h"
 #include "ft_printf/ft_printf.h"
 
-// typedef struct s_list
-// {
-// 	long		    content;
-// 	struct s_list	*next;
-// }	t_list;
+typedef struct s_stack
+{
+    int             top;
+	long		    num;
+	struct s_stack	*next;
+}	t_stack;
 
 
 
 
+int cheack_repet(t_list *data, int sise);
     
 void print_error(int i);
 int cheack(int *values, int sise, char **av);
