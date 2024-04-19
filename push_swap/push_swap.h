@@ -11,21 +11,24 @@
 
 // ========================================//
 
-#include "libft/libft.h"
-#include "ft_printf/ft_printf.h"
+#include "resources/libft/libft.h"
+#include "resources/ft_printf/ft_printf.h"
 
 typedef struct s_stack
 {
-    int             top;
-	long		    num;
+	long		    cont;
 	struct s_stack	*next;
 }	t_stack;
 
 
 
 
-int cheack_repet(t_list *data, int sise);
-    
+int cheack_repet(t_stack *data, int sise);
+void sa(t_stack **a);
+void sb(t_stack **b);
+void ss(t_stack **a, t_stack **b);
+
+
 void print_error(int i);
 int cheack(int *values, int sise, char **av);
 

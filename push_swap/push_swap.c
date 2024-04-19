@@ -1,12 +1,29 @@
 #include "push_swap.h"
 
-void print_list(t_list *lst) {
+void add_node(t_stack **head, int data)
+{
+    t_stack *tmp = malloc(sizeof(t_stack));
+    tmp->cont = data;
+    tmp->next = NULL;
+    if (*head == NULL)
+        *head = tmp;
+    else
+    {
+        t_stack *temp1  = *head;
+        while(temp1->next != NULL)
+            temp1  = temp1->next;
+        temp1->next = tmp;
+    }
+}
+
+void print_list(t_stack *lst) {
     while (lst != NULL) {
-        printf("the list is : %ld \n", lst->content);
+        printf("the list is : %ld \n", lst->cont);
         lst = lst->next;
     }
     printf("\n");
 }
+
 
 int main (int ac , char **av)
 {
@@ -16,12 +33,10 @@ int main (int ac , char **av)
     int k = 1;
     long number;
 
-
     i = 0;
     if (ac != 1)
     {
-
-        t_list *head = NULL;
+        t_stack *a = NULL;
         while (k <= ac - 1)
         {
             numbers = ft_split(av[k], ' ');
@@ -33,14 +48,14 @@ int main (int ac , char **av)
                     number = ft_atoi(numbers[i]);
                     if ((number > INT_MAX) || (number < INT_MIN))
                         print_error(2);
-                    t_list *new_node = ft_lstnew(number);
-                    ft_lstadd_back(&head, new_node);
+                    add_node(&a, number);
                 i++;
             }
             k++;
         }
-        cheack_repet(head, ac -1);
-        print_list(head);
+        cheack_repet(a, ac -1);
+        // printf("the list is |%ld|\n", a->next->cont);
+        print_list(a);
     }
     else
         print_error(1);

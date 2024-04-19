@@ -10,7 +10,7 @@
 //     }
 // }
 
-int cheack_repet(t_list *data, int sise)
+int cheack_repet(t_stack *data, int sise)
 {
     int *values;
     int i = 0;
@@ -22,7 +22,7 @@ int cheack_repet(t_list *data, int sise)
 
     while (i < sise)
     {
-        values[i] = data->content;
+        values[i] = data->cont;
         data = data->next;
         i++;
     }
