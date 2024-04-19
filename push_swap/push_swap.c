@@ -32,7 +32,7 @@ int main (int ac , char **av)
     int i;
     int k = 1;
     long number;
-
+    t_stack *b = NULL;
     i = 0;
     if (ac != 1)
     {
@@ -55,7 +55,13 @@ int main (int ac , char **av)
         }
         cheack_repet(a, ac -1);
         // printf("the list is |%ld|\n", a->next->cont);
+        puts("==== stack a =====\n");
         print_list(a);
+        ra(&a);
+        puts("==== stack a =====\n");
+        print_list(a);
+
+
     }
     else
         print_error(1);

@@ -24,10 +24,13 @@ typedef struct s_stack
 
 
 int cheack_repet(t_stack *data, int sise);
+void ft_swap(long *a, long *b);
 void sa(t_stack **a);
 void sb(t_stack **b);
 void ss(t_stack **a, t_stack **b);
-
+void pb(t_stack **b ,t_stack **a);
+void pa(t_stack **b ,t_stack **a);
+void ra(t_stack **a);
 
 void print_error(int i);
 int cheack(int *values, int sise, char **av);
