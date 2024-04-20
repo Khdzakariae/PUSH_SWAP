@@ -21,7 +21,7 @@ typedef struct s_stack
 }	t_stack;
 
 
-
+void _free(t_stack **head);
 void add_node(t_stack **head, int data);
 int cheack_repet(t_stack *data, int sise);
 void ft_swap(long *a, long *b);
@@ -33,7 +33,7 @@ void pa(t_stack **b ,t_stack **a);
 void ra(t_stack **a);
 void rb(t_stack **b);
 void rr(t_stack **a, t_stack **b);
-
+void rra(t_stack **a);
 
 void print_error(int i);
 int cheack(int *values, int sise, char **av);

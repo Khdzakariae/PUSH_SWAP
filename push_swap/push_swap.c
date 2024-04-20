@@ -57,25 +57,9 @@ int main (int ac , char **av)
         // printf("the list is |%ld|\n", a->next->cont);
         puts("==== stack a =====\n");
         print_list(a);
-        puts("==== stack b =====\n");
-        print_list(b);
-        puts("===================\n");
-        pb(&b, &a);
-        pb(&b, &a);
-        pb(&b, &a);
-        pb(&b, &a);
-        pb(&b, &a);
+        rra(&a);
         puts("==== stack a =====\n");
         print_list(a);
-        puts("==== stack b =====\n");
-        print_list(b);
-        puts("===================\n");
-        rr(&b, &a);
-        puts("==== stack a =====\n");
-        print_list(a);
-        puts("==== stack b =====\n");
-        print_list(b);
-        puts("===================\n");
     }
     else
         print_error(1);
