@@ -12,6 +12,7 @@ void pop_b(t_stack **b)
 
 void pb(t_stack **b ,t_stack **a)
 {
+    //rotection
     if (!*a)
         return;
     t_stack *temp = malloc(sizeof(t_stack));
@@ -45,14 +46,4 @@ void pa(t_stack **b ,t_stack **a)
 
 // }
 
-void ra(t_stack **a)
-{
-    t_stack *tmp = *a;
-
-    while(tmp->next->next != NULL)
-        tmp  = tmp->next;
-
-    tmp->next->next = *a;
-    *a = tmp;
-}
 
