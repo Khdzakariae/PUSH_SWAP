@@ -25,6 +25,10 @@ void _free(t_stack **head);
 void add_node(t_stack **head, int data);
 int cheack_repet(t_stack *data, int sise);
 void ft_swap(long *a, long *b);
+
+
+
+
 void sa(t_stack **a);
 void sb(t_stack **b);
 void ss(t_stack **a, t_stack **b);
