@@ -1,8 +1,5 @@
 #include "../push_swap.h"
 
-
-
-
 void ft_swap(long *a, long *b)
 {
     long tmp;
@@ -31,4 +28,5 @@ void ss(t_stack **a, t_stack **b)
 {
     sa(&(*a));
     sb(&(*b));
+     
 }

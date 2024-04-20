@@ -60,6 +60,8 @@ int main (int ac , char **av)
         rra(&a);
         puts("==== stack a =====\n");
         print_list(a);
+        print_list(b);
+
     }
     else
         print_error(1);

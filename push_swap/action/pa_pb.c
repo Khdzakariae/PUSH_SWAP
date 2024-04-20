@@ -21,6 +21,7 @@ void pb(t_stack **b ,t_stack **a)
     temp->next = *b ;
     *b = temp;
     pop_b(&(*a));
+    puts("pb");
 }
 
 void pa(t_stack **b ,t_stack **a)
@@ -33,17 +34,9 @@ void pa(t_stack **b ,t_stack **a)
     temp->next = *a ;
     *a = temp;
     pop_b(&(*b));
+    puts("pa");
+
 }
 
-// void newlist(t_data **head, int nbr)
-// {
-//     t_data *temp  = malloc(sizeof(t_data));
-//     temp->cont = nbr;
-//     temp->next = NULL;
-//     if (*head != NULL)
-//         temp->next = *head;
-//     *head = temp;
-
-// }
 
 
