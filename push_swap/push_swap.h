@@ -20,10 +20,10 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-
+void cheack_sort(t_stack *head);
 void _free(t_stack **head);
 void add_node(t_stack **head, int data);
-int cheack_repet(t_stack *data, int sise);
+void cheack_repet(t_stack *head);
 void ft_swap(long *a, long *b);
 
 

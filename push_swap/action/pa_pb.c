@@ -21,7 +21,7 @@ void pb(t_stack **b ,t_stack **a)
     temp->next = *b ;
     *b = temp;
     pop_b(&(*a));
-    puts("pb");
+    ft_printf("pb\n");
 }
 
 void pa(t_stack **b ,t_stack **a)
@@ -34,8 +34,7 @@ void pa(t_stack **b ,t_stack **a)
     temp->next = *a ;
     *a = temp;
     pop_b(&(*b));
-    puts("pa");
-
+    ft_printf("pa\n");
 }
 
 

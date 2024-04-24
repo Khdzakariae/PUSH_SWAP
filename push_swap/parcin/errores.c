@@ -2,9 +2,7 @@
 
 void print_error(int i)
 {
-    if (i == 1)
-        exit(1);
-    else if (i == 2)
+    if (i == 2)
     {
         ft_putstr_fd(RED"ERROR NEMBER (enter des nembers valide)", 2);
         exit(1);
@@ -18,6 +16,10 @@ void print_error(int i)
     {
         ft_putstr_fd(RED"LARGUMANT VIDE !!", 2);
         exit(1);
-
+    }
+    else if (i == 5)
+    {
+        ft_putstr_fd(RED"LES ARGUMANT EST SORT !!!!", 2);
+        exit(1);
     }
 }

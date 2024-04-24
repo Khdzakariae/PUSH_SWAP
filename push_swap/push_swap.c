@@ -53,11 +53,10 @@ int main (int ac , char **av)
             }
             k++;
         }
-        cheack_repet(a, ac -1);
-        // printf("the list is |%ld|\n", a->next->cont);
+        cheack_repet(a);
+        // cheack_sort(a);
         puts("==== stack a =====\n");
         print_list(a);
-        rra(&a);
         puts("==== stack a =====\n");
         print_list(a);
         print_list(b);
