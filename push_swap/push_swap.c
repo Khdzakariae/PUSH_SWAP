@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 void add_node(t_stack **head, int data)
 {
@@ -55,6 +55,7 @@ void parrss(t_stack *a)
     cheack_repet(a);
     cheack_sort(a);
 }
+
 int main (int ac , char **av)
 {
     t_stack *a;
@@ -71,13 +72,7 @@ int main (int ac , char **av)
         print_list(a);
         puts("==== stack a =====\n");
         print_list(a);
-        print_list(b);
     }
     else
         print_error(1);
 }
-
-
-
-
-

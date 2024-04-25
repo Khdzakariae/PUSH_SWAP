@@ -11,8 +11,8 @@
 
 // ========================================//
 
-#include "resources/libft/libft.h"
-#include "resources/ft_printf/ft_printf.h"
+#include "../resources/libft/libft.h"
+#include "../resources/ft_printf/ft_printf.h"
 
 typedef struct s_stack
 {

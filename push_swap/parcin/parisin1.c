@@ -1,4 +1,4 @@
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void cheack_sort(t_stack *head)
 {
@@ -13,7 +13,6 @@ void cheack_sort(t_stack *head)
         print_error(5);
     return;
 }
-
 
 void cheack_repet(t_stack *head)
 {

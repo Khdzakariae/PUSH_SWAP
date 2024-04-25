@@ -1,4 +1,5 @@
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
+
 
 void ft_swap(long *a, long *b)
 {
@@ -16,7 +17,6 @@ void sa(t_stack **a)
         ft_swap(&((*a)->cont), &((*a)->next->cont));
     }
     ft_printf("sa\n");
-
 }
 
 void sb(t_stack **b)
@@ -25,7 +25,6 @@ void sb(t_stack **b)
         ft_swap(&((*b)->cont), &((*b)->next->cont));
     }
     ft_printf("sb\n");
-
 }
 
 void ss(t_stack **a, t_stack **b)

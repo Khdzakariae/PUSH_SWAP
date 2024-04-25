@@ -1,6 +1,4 @@
-#include "../push_swap.h"
-
-
+#include "../includes/push_swap.h"
 
 void ra(t_stack **a)
 {
@@ -30,6 +28,5 @@ void rr(t_stack **b, t_stack **a)
     ra(&(*a));
     rb(&(*b));
     ft_printf("rr\n");
-
 }
 
