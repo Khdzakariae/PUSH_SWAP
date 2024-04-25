@@ -14,6 +14,7 @@ t_stack *searching_biggest(t_stack *a)
     }
     return(big);
 }
+
 t_stack *searching_minimum(t_stack *a)
 {
     t_stack *min = a;

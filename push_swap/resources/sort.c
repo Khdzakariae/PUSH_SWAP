@@ -39,5 +39,33 @@ void sort_numer_5(t_stack **a, t_stack **b)
     sort_numer_3(a);
     while (*b != NULL)
         pa(b, a);
+}
 
+// void sort_numer(int *tab, t_stack **a, t_stack**b)
+// {
+//     t_stack *tmp;
+//     t_stack *small = searching_minimum(*a);
+//     int i = 0;
+//     is_top(*a);
+//     tmp = *a;
+//     while(tmp)
+//     {
+//         if(small->top)
+//             rra(a);
+//         else
+//             ra(a);
+//         pb(b, a);
+//         small = searching_minimum(*a);
+//         tmp = tmp->next;
+//     }
+// }
+void push_swap(t_stack **a, t_stack **b, long *tab)
+{
+    len(*a);
+    if ((*a)->len == 2)
+        sort_numer_2(a);
+    if ((*a)->len == 3)
+        sort_numer_3(a);
+    if ((*a)->len == 5)
+        sort_numer_5(a, b);
 }

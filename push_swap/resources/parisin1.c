@@ -61,3 +61,8 @@ void is_top(t_stack *head)
         i++;
     }
 }
+void parrss(t_stack *a)
+{
+    cheack_repet(a);
+    cheack_sort(a);
+}

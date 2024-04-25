@@ -23,25 +23,30 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-
-void len(t_stack *head);
 void cheack_sort(t_stack *head);
-void _free(t_stack **head);
-void add_node(t_stack **head, int data);
 void cheack_repet(t_stack *head);
-void ft_swap(long *a, long *b);
+void len(t_stack *head);
 void is_top(t_stack *head);
+void parrss(t_stack *a);
 
+
+void add_node(t_stack **head, int data);
+void _push(t_stack **a, t_stack **b, int ac, char **av);
+long *convert(t_stack *a);
+int sort(long *tab , int len);
+
+void _free(t_stack **head);
+void ft_swap(long *a, long *b);
+
+void push_swap(t_stack **a, t_stack **b, long *tab);
 void sort_numer_2(t_stack **a);
 void sort_numer_3(t_stack **a);
 void sort_numer_5(t_stack **a, t_stack **b);
-
+void sort_numer(int *tab, t_stack **a, t_stack**b);
 
 
 t_stack *searching_biggest(t_stack *a);
 t_stack *searching_minimum(t_stack *a);
-
-
 
 
 void sa(t_stack **a);
