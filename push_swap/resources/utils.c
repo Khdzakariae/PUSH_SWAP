@@ -1,5 +1,6 @@
 #include "../includes/push_swap.h"
 
+
 void add_node(t_stack **head, int data)
 {
     t_stack *tmp = malloc(sizeof(t_stack));

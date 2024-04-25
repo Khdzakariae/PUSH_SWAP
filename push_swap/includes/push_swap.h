@@ -42,7 +42,8 @@ void push_swap(t_stack **a, t_stack **b, long *tab);
 void sort_numer_2(t_stack **a);
 void sort_numer_3(t_stack **a);
 void sort_numer_5(t_stack **a, t_stack **b);
-void sort_numer(int *tab, t_stack **a, t_stack**b);
+void sort_numer(t_stack **a, t_stack**b, long *tab);
+
 
 
 t_stack *searching_biggest(t_stack *a);
