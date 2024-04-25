@@ -76,6 +76,8 @@ int main (int ac , char **av)
             sort_numer_2(&a);
         if (ac == 4)
             sort_numer_3(&a);
+        if (ac == 6)
+            sort_numer_5(&a, &b);
         puts("==== stack a =====\n");
         print_list(a);
     }

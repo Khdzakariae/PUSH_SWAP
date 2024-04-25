@@ -18,7 +18,26 @@ void sort_numer_3(t_stack **a)
 
 void sort_numer_5(t_stack **a, t_stack **b)
 {
-    
-    t_stack *min = searching_minimum(*b);
-    
+    is_top(*a);
+    t_stack *min = searching_minimum(*a);
+    int i = 0;
+    t_stack *tmp = *a;
+    while(i < 2)
+    {
+        min = searching_minimum(*a);
+        while ((*a) != min)
+        {
+            if (tmp->top == 0)
+                rra(a);
+            else
+                ra(a);
+        }
+        pb(b, a);
+        tmp = tmp->next;  
+        i++;
+    }
+    sort_numer_3(a);
+    while (*b != NULL)
+        pa(b, a);
+
 }
