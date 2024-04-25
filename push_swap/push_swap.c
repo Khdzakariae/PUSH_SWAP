@@ -48,6 +48,7 @@ void _push(t_stack **a, t_stack **b, int ac, char **av)
         }
         k++;
     }
+
 }
 
 void parrss(t_stack *a)
@@ -68,7 +69,7 @@ int main (int ac , char **av)
     {
         _push(&a, &b, ac, av);
         parrss(a);
-        searching_minimum(a);
+
         puts("==== stack a =====\n");
         print_list(a);
         if (ac == 3)

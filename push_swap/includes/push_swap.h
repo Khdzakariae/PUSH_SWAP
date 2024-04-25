@@ -16,16 +16,21 @@
 
 typedef struct s_stack
 {
+	int 			index;
+	int				len;
 	long		    cont;
+	int				top;
 	struct s_stack	*next;
 }	t_stack;
 
+
+void len(t_stack *head);
 void cheack_sort(t_stack *head);
 void _free(t_stack **head);
 void add_node(t_stack **head, int data);
 void cheack_repet(t_stack *head);
 void ft_swap(long *a, long *b);
-
+void is_top(t_stack *head);
 void sort_numer_2(t_stack **a);
 void sort_numer_3(t_stack **a);
 

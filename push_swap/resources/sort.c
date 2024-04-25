@@ -16,8 +16,9 @@ void sort_numer_3(t_stack **a)
         sa(&(*a));
 }
 
-// void sort_numer_5(t_stack **a, t_stack **b)
-// {
-//     t_stack *min = searching_minimum(*b);
+void sort_numer_5(t_stack **a, t_stack **b)
+{
     
-// }
+    t_stack *min = searching_minimum(*b);
+    
+}

@@ -2,6 +2,7 @@
 
 t_stack *searching_biggest(t_stack *a)
 {
+    int ind = 1;
     t_stack *big = a;
     t_stack *tmp = a;
 

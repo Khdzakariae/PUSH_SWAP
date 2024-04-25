@@ -34,10 +34,30 @@ void cheack_repet(t_stack *head)
 
 void len(t_stack *head)
 {
-    t_stack *tmp;
-    while(tmp->next)
+    int temp = 0;
+    t_stack *tmp = head;
+    while(tmp)
     {
         tmp = tmp->next;
-        
+        temp++;
+    }
+    (head)->len = temp;
+}
+
+void is_top(t_stack *head)
+{
+    t_stack *tmp = head;
+    len(head);
+    int middle = head->len / 2;
+    int i = 0;
+    while (tmp)
+    {
+        tmp->index = i;
+        if (i <= middle)
+            tmp->top = 1;
+        else if (i > middle)
+            tmp->top = 1;
+        tmp = tmp->next;
+        i++;
     }
 }
