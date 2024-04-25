@@ -24,43 +24,54 @@ void print_list(t_stack *lst) {
     printf("\n");
 }
 
-
-int main (int ac , char **av)
+void _push(t_stack **a, t_stack **b, int ac, char **av)
 {
-
     char **numbers;
     int i;
     int k = 1;
     long number;
-    t_stack *b = NULL;
+
     i = 0;
+    while (k <= ac - 1)
+    {
+        numbers = ft_split(av[k], ' ');
+        if (!*numbers)
+            print_error(4);
+        i = 0;
+        while (numbers[i] != NULL)
+        {
+            number = ft_atoi(numbers[i]);
+            if ((number > INT_MAX) || (number < INT_MIN))
+                print_error(2);
+            add_node(&(*a), number);
+            i++;
+        }
+        k++;
+    }
+}
+
+void parrss(t_stack *a)
+{
+    cheack_repet(a);
+    cheack_sort(a);
+}
+int main (int ac , char **av)
+{
+    t_stack *a;
+    t_stack *b;
+
+    a = NULL;
+    b = NULL;
+
     if (ac != 1)
     {
-        t_stack *a = NULL;
-        while (k <= ac - 1)
-        {
-            numbers = ft_split(av[k], ' ');
-            if (!*numbers)
-                print_error(4);
-            i = 0;
-            while (numbers[i] != NULL)
-            {
-                    number = ft_atoi(numbers[i]);
-                    if ((number > INT_MAX) || (number < INT_MIN))
-                        print_error(2);
-                    add_node(&a, number);
-                i++;
-            }
-            k++;
-        }
-        cheack_repet(a);
-        // cheack_sort(a);
+        _push(&a, &b, ac, av);
+        parrss(a);
         puts("==== stack a =====\n");
         print_list(a);
         puts("==== stack a =====\n");
         print_list(a);
         print_list(b);
-
     }
     else
         print_error(1);
