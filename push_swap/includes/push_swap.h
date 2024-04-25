@@ -26,6 +26,13 @@ void add_node(t_stack **head, int data);
 void cheack_repet(t_stack *head);
 void ft_swap(long *a, long *b);
 
+void sort_numer_2(t_stack **a);
+void sort_numer_3(t_stack **a);
+
+
+t_stack *searching_biggest(t_stack *a);
+t_stack *searching_minimum(t_stack *a);
+
 
 
 

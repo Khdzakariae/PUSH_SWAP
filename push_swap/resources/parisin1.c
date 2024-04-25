@@ -30,3 +30,14 @@ void cheack_repet(t_stack *head)
     }
     return;
 }
+
+
+void len(t_stack *head)
+{
+    t_stack *tmp;
+    while(tmp->next)
+    {
+        tmp = tmp->next;
+        
+    }
+}

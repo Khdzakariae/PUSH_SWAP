@@ -4,8 +4,9 @@ NAME = push_swap
 # FLAGS = -Wall -Wextra -Werror
 
 
-SRC =	push_swap.c parcin/parisin1.c parcin/errores.c action/sa_sb_ss_.c \
-		action/pa_pb.c action/ra_rb_rr_.c action/rra_rrb_rrr.c
+SRC =	push_swap.c resources/errores.c  resources/parisin1.c action/sa_sb_ss_.c \
+		action/pa_pb.c action/ra_rb_rr_.c action/rra_rrb_rrr.c resources/searching.c \
+		resources/sort.c
 
 LIBFT = resources/libft/libft.a
 FT_PRINTF = resources/ft_printf/libftprintf.a

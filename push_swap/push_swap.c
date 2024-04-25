@@ -64,12 +64,17 @@ int main (int ac , char **av)
     a = NULL;
     b = NULL;
 
-    if (ac != 1)
+    if (ac > 2)
     {
         _push(&a, &b, ac, av);
         parrss(a);
+        searching_minimum(a);
         puts("==== stack a =====\n");
         print_list(a);
+        if (ac == 3)
+            sort_numer_2(&a);
+        if (ac == 4)
+            sort_numer_3(&a);
         puts("==== stack a =====\n");
         print_list(a);
     }
