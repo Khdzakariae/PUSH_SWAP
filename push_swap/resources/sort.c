@@ -46,28 +46,38 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
     len(*a);
     int lent = (*a)->len;;
     int i = 0;
+    int start = 0;
     int end = 2;
-    t_stack *tmp = *a;
-    while((*a))
+    t_stack *tmp;
+
+    tmp =  *a;
+    while((tmp))
     {
 
-        if((tmp->cont >= tab[i] && tmp->cont <= tab[end]))
+        if(((tmp)->cont >= tab[start] && (tmp)->cont <= tab[end]))
         {
             pb(b, a);
-            i++;
             if (end != lent)
+            {
+                start++;
                 end++;
+            }
         }
-        else if (tmp->cont < tab[i])
+        else if ((tmp)->cont < tab[start])
         {
             pb(b, a);
             rb(b);
+            if (end != lent)
+            {
+                start++;
+                end++;
+            }
         }
         else
         {
             rra(a);
-            tmp = *a;
         }
+        tmp = *a;
         // while(!tab[end] && !(tmp->cont >= tab[i] && tmp->cont <= tab[end]))
         //     rra(a);
         //tmp =tmp->next;
