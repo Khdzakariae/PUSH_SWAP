@@ -43,21 +43,7 @@ void sort_numer_5(t_stack **a, t_stack **b)
 
 // void sort_numer(int *tab, t_stack **a, t_stack**b)
 // {
-//     t_stack *tmp;
-//     t_stack *small = searching_minimum(*a);
-//     int i = 0;
-//     is_top(*a);
-//     tmp = *a;
-//     while(tmp)
-//     {
-//         if(small->top)
-//             rra(a);
-//         else
-//             ra(a);
-//         pb(b, a);
-//         small = searching_minimum(*a);
-//         tmp = tmp->next;
-//     }
+
 // }
 void push_swap(t_stack **a, t_stack **b, long *tab)
 {
