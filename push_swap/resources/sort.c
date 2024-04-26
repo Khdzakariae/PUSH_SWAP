@@ -15,6 +15,25 @@ void sort_numer_3(t_stack **a)
     if((*a)->cont > (*a)->next->cont)
         sa(&(*a));
 }
+void part2(t_stack **a, t_stack **b)
+{
+    is_top(*b);
+    t_stack *big = searching_biggest(*b);
+    int i = 0;
+    t_stack *tmp = *b;
+    while(*b)
+    {
+        big = searching_biggest(*b);
+        while ((*b) != big)
+        {
+            if (tmp->top == 0)
+                rra(b);
+            else
+                ra(b);
+        }
+        pa(b, a);
+    }
+}
 
 void sort_numer_5(t_stack **a, t_stack **b)
 {
@@ -47,13 +66,14 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
     int lent = (*a)->len;;
     int i = 0;
     int start = 0;
-    int end = 2;
+    int end;
+    if (lent > 100)
+        end = 20;
     t_stack *tmp;
 
     tmp =  *a;
-    while((tmp))
+    while((*a))
     {
-
         if(((tmp)->cont >= tab[start] && (tmp)->cont <= tab[end]))
         {
             pb(b, a);
@@ -73,15 +93,13 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
                 end++;
             }
         }
-        else
-        {
-            rra(a);
-        }
+        else if (end != lent)
+            ra(a);
         tmp = *a;
-        // while(!tab[end] && !(tmp->cont >= tab[i] && tmp->cont <= tab[end]))
-        //     rra(a);
-        //tmp =tmp->next;
     }
+    while(*a)
+        pb(b, a);
+    part2(a, b);
 }
 void push_swap(t_stack **a, t_stack **b, long *tab)
 {

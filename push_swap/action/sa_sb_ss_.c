@@ -13,6 +13,11 @@ void ft_swap(long *a, long *b)
 
 void sa(t_stack **a)
 {
+    exit(10);
+    len(*a);
+    printf("lent |%i|\n\n",(*a)->len);
+    if ((*a)->len < 2)
+        return;
     if (*a != NULL && (*a)->next != NULL) {
         ft_swap(&((*a)->cont), &((*a)->next->cont));
     }

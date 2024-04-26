@@ -18,7 +18,6 @@ void _printt(int *tab, int len)
     }  
 }
 
-
 int main (int ac , char **av)
 {
     t_stack *a;
@@ -33,10 +32,6 @@ int main (int ac , char **av)
         long *tab = convert(a);
         sort(tab, a->len);
         push_swap(&a, &b, tab);
-        puts("==== stack a =====\n");
-        print_list(a);
-        puts("==== stack b =====\n");
-        print_list(b);
     }
     else
         print_error(1);
