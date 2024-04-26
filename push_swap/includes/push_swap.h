@@ -29,6 +29,7 @@ void len(t_stack *head);
 void is_top(t_stack *head);
 void parrss(t_stack *a);
 
+void print_list(t_stack *lst) ;
 
 void add_node(t_stack **head, int data);
 void _push(t_stack **a, t_stack **b, int ac, char **av);

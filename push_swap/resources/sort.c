@@ -15,27 +15,6 @@ void sort_numer_3(t_stack **a)
     if((*a)->cont > (*a)->next->cont)
         sa(&(*a));
 }
-void part2(t_stack **a, t_stack **b)
-{
-    is_top(*b);
-    t_stack *big = searching_biggest(*b);
-    int i = 0;
-    t_stack *tmp = *b;
-    while(*b)
-    {
-        big = searching_biggest(*b);
-        while ((*b) != big)
-        {
-            if (tmp->top == 0)
-                rra(b);
-            else
-                ra(b);
-        }
-        pa(b, a);
-    }
-    tmp = *b;
-
-}
 
 void sort_numer_5(t_stack **a, t_stack **b)
 {
@@ -62,26 +41,62 @@ void sort_numer_5(t_stack **a, t_stack **b)
         pa(b, a);
 }
 
+// void part2(t_stack **a, t_stack **b)
+// {
+//     is_top(*b);
+//     t_stack *big = searching_biggest(*b);
+//     int i = 0;
+//     t_stack *tmp = *b;
+//     while(*b)
+//     {
+//         is_top(*b);
+//         tmp = *b;
+//         if((*b) == big)
+//             pa(b, a);
+        
+//         else {
+//             tmp = (*b);
+//             // count rrb or rb
+//         }
+        
+        
+//         else if (tmp->top == 0 && (*b) != big)
+//             rrb(b);
+
+
+//          else if (tmp->top == 1 && (*b) != big)
+//                 rb(b);
+
+
+    
+//              puts("==== stack a =====\n");
+//              print_list(*a);
+//              puts("==== stack b =====\n");
+//              print_list(*b);
+
+//     }
+// }
 void sort_numer(t_stack **a, t_stack**b, long *tab)
 {
     len(*a);
-    int lent = (*a)->len;;
+    int lent = (*a)->len - 1;
     int i = 0;
     int start = 0;
-    int end;
-    if (lent > 100)
-        end = 20;
-    else if (lent <= 100)
-        end = 50;
+    int end = 2;
     t_stack *tmp;
+    if (lent > 5 && lent <= 20)
+        end = 2;
+    else if (lent > 20 && lent <= 100)
+        end = 30;
 
     tmp =  *a;
-    while((*a))
+    while((tmp))
     {
+
         if(((tmp)->cont >= tab[start] && (tmp)->cont <= tab[end]))
         {
             pb(b, a);
-            if (end != lent)
+            if (end < lent)
             {
                 start++;
                 end++;
@@ -91,31 +106,66 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
         {
             pb(b, a);
             rb(b);
-            if (end != lent)
+            if (end < lent)
             {
                 start++;
                 end++;
             }
-        } 
-        else if (tmp->cont > tab[end]) {
-            ra(a);
         }
-        else
+        else if (tmp == NULL)
+            pb(b, a); 
+        else 
             ra(a);
-        if (lent == end)
-        {
-            part2(a, b);
-            return;
-
-        }
-        // else{
-        //     pb(b, a);
-        // }
-        // while(*a && end == lent)
-        //     pb(b, a);
         tmp = *a;
     }
+    // part2(a, b);
 }
+// void sort_numer(t_stack **a, t_stack**b, long *tab)
+// {
+//     len(*a);
+//     int lent = (*a)->len;;
+//     int i = 0;
+//     int start = 0;
+//     int end = 20;
+//     t_stack *tmp;
+
+//     tmp =  *a;
+//     while(tmp)
+//     {
+//         if(((tmp)->cont >= tab[start] && (tmp)->cont <= tab[end]))
+//         {
+//             pb(b, a);
+//             if (end != lent)
+//             {
+//                 start++;
+//                 end++;
+//             }
+//         }
+//         else if ((tmp)->cont < tab[start])
+//         {
+//             pb(b, a);
+//             rb(b);
+//             if (end != lent)
+//             {
+//                 start++;
+//                 end++;
+//             }
+//         }
+//         else if ((*a) != NULL)
+//             pb(b, a);
+//         else
+//             rra(a);
+//         tmp = *a;
+//     }
+//             //             puts("==== stack a =====\n");
+//             // print_list(*a);
+//             // puts("==== stack b =====\n");
+//             // print_list(*b);
+//     // part2(a, b);
+
+// }
+
+
 void push_swap(t_stack **a, t_stack **b, long *tab)
 {
     len(*a);

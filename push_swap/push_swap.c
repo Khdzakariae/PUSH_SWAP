@@ -1,6 +1,7 @@
 #include "includes/push_swap.h"
 
-void print_list(t_stack *lst) {
+void print_list(t_stack *lst) 
+{
     while (lst != NULL) {
         printf("the list is : %ld \n", lst->cont);
         lst = lst->next;
@@ -32,7 +33,7 @@ int main (int ac , char **av)
         long *tab = convert(a);
         sort(tab, a->len);
         push_swap(&a, &b, tab);
-puts("==== stack a =====\n");
+        puts("==== stack a =====\n");
         print_list(a);
         puts("==== stack b =====\n");
         print_list(b);
