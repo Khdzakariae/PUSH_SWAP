@@ -33,6 +33,8 @@ void part2(t_stack **a, t_stack **b)
         }
         pa(b, a);
     }
+    tmp = *b;
+
 }
 
 void sort_numer_5(t_stack **a, t_stack **b)
@@ -69,6 +71,8 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
     int end;
     if (lent > 100)
         end = 20;
+    else if (lent <= 100)
+        end = 50;
     t_stack *tmp;
 
     tmp =  *a;
@@ -92,14 +96,25 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
                 start++;
                 end++;
             }
-        }
-        else if (end != lent)
+        } 
+        else if (tmp->cont > tab[end]) {
             ra(a);
+        }
+        else
+            ra(a);
+        if (lent == end)
+        {
+            part2(a, b);
+            return;
+
+        }
+        // else{
+        //     pb(b, a);
+        // }
+        // while(*a && end == lent)
+        //     pb(b, a);
         tmp = *a;
     }
-    while(*a)
-        pb(b, a);
-    part2(a, b);
 }
 void push_swap(t_stack **a, t_stack **b, long *tab)
 {
