@@ -52,12 +52,13 @@ void sort_numer_5(t_stack **a, t_stack **b)
             // print_list(*b);
             // printf("the indest is |%d|\n the lint is |%d|\n",big->index + 1, ((tmp)->len / 2));
 
-void part2(t_stack **a, t_stack **b) {
+void part2(t_stack **a, t_stack **b) 
+{
     t_stack *tmp = *b;
     t_stack *big = searching_biggest(*b);
-    while (*b) {
+    while (*b) 
+    {
         tmp = (*b);
-        is_top(tmp);
         big = searching_biggest((tmp));
         len(tmp);
         if (*b != big) 
@@ -78,7 +79,7 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
     int lent = (*a)->len - 1;
     int i = 0;
     int start = 0;
-    int end = 10;
+    int end = 30;
     t_stack *tmp;
     tmp =  *a;
     while((tmp))
