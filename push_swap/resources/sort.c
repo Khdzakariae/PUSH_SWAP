@@ -79,7 +79,16 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
     int lent = (*a)->len - 1;
     int i = 0;
     int start = 0;
-    int end = 30;
+    int end ;
+    if (lent <= 10)
+        end = 2;
+    else if (lent > 10 && lent <= 100 )
+        end = 10;
+    else if (lent > 100 && lent <= 500 )
+        end = 30;
+    else
+        end = 40;
+    
     t_stack *tmp;
     tmp =  *a;
     while((tmp))
@@ -116,11 +125,12 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
 void push_swap(t_stack **a, t_stack **b, long *tab)
 {
     len(*a);
-    // if ((*a)->len == 2)
-    //     sort_numer_2(a);
-    // if ((*a)->len == 3)
-    //     sort_numer_3(a);
-    // if ((*a)->len == 5)
-    //     sort_numer_5(a, b);
-    sort_numer(a, b, tab);
+    if ((*a)->len == 2)
+        sort_numer_2(a);
+    else if ((*a)->len == 3)
+        sort_numer_3(a);
+    else if ((*a)->len == 5)
+        sort_numer_5(a, b);
+    else
+        sort_numer(a, b, tab);
 }
