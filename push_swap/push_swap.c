@@ -28,6 +28,7 @@ int main (int ac , char **av)
 
     if (ac > 2)
     {
+        
         _push(&a, &b, ac, av);
         parrss(a);
         long *tab = convert(a);
