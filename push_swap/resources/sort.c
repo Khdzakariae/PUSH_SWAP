@@ -4,6 +4,8 @@ void	sort_numer_2(t_stack **a)
 {
 	if ((*a)->cont > (*a)->next->cont)
 		sa(&(*a));
+    else
+        return;
 }
 void	sort_numer_3(t_stack **a)
 {
@@ -11,11 +13,12 @@ void	sort_numer_3(t_stack **a)
 
 	big = searching_biggest(*a);
 	if (*a == big)
-		ra(&(*a));
+		rra(&(*a));
 	else if ((*a)->next == big)
 		rra(&(*a));
 	if ((*a)->cont > (*a)->next->cont)
-		sa(&(*a));
+		sa(a);
+
 }
 
 void	sort_numer_5(t_stack **a, t_stack **b)
@@ -24,12 +27,12 @@ void	sort_numer_5(t_stack **a, t_stack **b)
 	int		i;
 	t_stack	*tmp;
 
-	is_top(*a);
 	min = searching_minimum(*a);
 	i = 0;
 	tmp = *a;
 	while (i < 2)
 	{
+	    is_top(*a);
 		min = searching_minimum(*a);
 		while ((*a) != min)
 		{
@@ -38,7 +41,8 @@ void	sort_numer_5(t_stack **a, t_stack **b)
 			else
 				ra(a);
 		}
-		pb(b, a);
+        if((*a) == min)
+		    pb(b, a);
 		tmp = tmp->next;
 		i++;
 	}
