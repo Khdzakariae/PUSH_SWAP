@@ -40,59 +40,49 @@ void sort_numer_5(t_stack **a, t_stack **b)
     while (*b != NULL)
         pa(b, a);
 }
+            // puts("==== stack a =====\n");
+            // print_list(*a);
+            // puts("==== stack b =====\n");
+            // print_list(*b);
+            // printf("the indest is |%d|\n\n\n\n\n",big->index);
+            // exit(5);
+            // puts("==== stack a =====\n");
+            // print_list(*a);
+            // puts("==== stack b =====\n");
+            // print_list(*b);
+            // printf("the indest is |%d|\n the lint is |%d|\n",big->index + 1, ((tmp)->len / 2));
 
-// void part2(t_stack **a, t_stack **b)
-// {
-//     is_top(*b);
-//     t_stack *big = searching_biggest(*b);
-//     int i = 0;
-//     t_stack *tmp = *b;
-//     while(*b)
-//     {
-//         is_top(*b);
-//         tmp = *b;
-//         if((*b) == big)
-//             pa(b, a);
-        
-//         else {
-//             tmp = (*b);
-//             // count rrb or rb
-//         }
-        
-        
-//         else if (tmp->top == 0 && (*b) != big)
-//             rrb(b);
+void part2(t_stack **a, t_stack **b) {
+    t_stack *tmp = *b;
+    t_stack *big = searching_biggest(*b);
+    while (*b) {
+        tmp = (*b);
+        is_top(tmp);
+        big = searching_biggest((tmp));
+        len(tmp);
+        if (*b != big) 
+        {
+            if ((big->index) <= (((tmp)->len / 2)))
+                rb(b);
+            else if ((big->index)  > (((tmp)->len / 2))) 
+                rrb(b);
+        }
+        if (*b == big)
+            pa(b, a);
+    }
+}
 
-
-//          else if (tmp->top == 1 && (*b) != big)
-//                 rb(b);
-
-
-    
-//              puts("==== stack a =====\n");
-//              print_list(*a);
-//              puts("==== stack b =====\n");
-//              print_list(*b);
-
-//     }
-// }
 void sort_numer(t_stack **a, t_stack**b, long *tab)
 {
     len(*a);
     int lent = (*a)->len - 1;
     int i = 0;
     int start = 0;
-    int end = 2;
+    int end = 10;
     t_stack *tmp;
-    if (lent > 5 && lent <= 20)
-        end = 2;
-    else if (lent > 20 && lent <= 100)
-        end = 30;
-
     tmp =  *a;
     while((tmp))
     {
-
         if(((tmp)->cont >= tab[start] && (tmp)->cont <= tab[end]))
         {
             pb(b, a);
@@ -118,52 +108,8 @@ void sort_numer(t_stack **a, t_stack**b, long *tab)
             ra(a);
         tmp = *a;
     }
-    // part2(a, b);
+    part2(a, b);
 }
-// void sort_numer(t_stack **a, t_stack**b, long *tab)
-// {
-//     len(*a);
-//     int lent = (*a)->len;;
-//     int i = 0;
-//     int start = 0;
-//     int end = 20;
-//     t_stack *tmp;
-
-//     tmp =  *a;
-//     while(tmp)
-//     {
-//         if(((tmp)->cont >= tab[start] && (tmp)->cont <= tab[end]))
-//         {
-//             pb(b, a);
-//             if (end != lent)
-//             {
-//                 start++;
-//                 end++;
-//             }
-//         }
-//         else if ((tmp)->cont < tab[start])
-//         {
-//             pb(b, a);
-//             rb(b);
-//             if (end != lent)
-//             {
-//                 start++;
-//                 end++;
-//             }
-//         }
-//         else if ((*a) != NULL)
-//             pb(b, a);
-//         else
-//             rra(a);
-//         tmp = *a;
-//     }
-//             //             puts("==== stack a =====\n");
-//             // print_list(*a);
-//             // puts("==== stack b =====\n");
-//             // print_list(*b);
-//     // part2(a, b);
-
-// }
 
 
 void push_swap(t_stack **a, t_stack **b, long *tab)
