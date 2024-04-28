@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/28 18:56:26 by zel-khad          #+#    #+#             */
+/*   Updated: 2024/04/28 18:56:27 by zel-khad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	sort_numer_2(t_stack **a)
 {
 	if ((*a)->cont > (*a)->next->cont)
 		sa(&(*a));
-    else
-        return;
+	else
+		return ;
 }
 void	sort_numer_3(t_stack **a)
 {
@@ -18,7 +30,6 @@ void	sort_numer_3(t_stack **a)
 		rra(&(*a));
 	if ((*a)->cont > (*a)->next->cont)
 		sa(a);
-
 }
 
 void	sort_numer_5(t_stack **a, t_stack **b)
@@ -32,7 +43,7 @@ void	sort_numer_5(t_stack **a, t_stack **b)
 	tmp = *a;
 	while (i < 2)
 	{
-	    is_top(*a);
+		is_top(*a);
 		min = searching_minimum(*a);
 		while ((*a) != min)
 		{
@@ -41,8 +52,8 @@ void	sort_numer_5(t_stack **a, t_stack **b)
 			else
 				ra(a);
 		}
-        if((*a) == min)
-		    pb(b, a);
+		if ((*a) == min)
+			pb(b, a);
 		tmp = tmp->next;
 		i++;
 	}

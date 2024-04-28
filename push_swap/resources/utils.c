@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/28 18:56:48 by zel-khad          #+#    #+#             */
+/*   Updated: 2024/04/28 18:58:38 by zel-khad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 void	add_node(t_stack **head, int data)
@@ -67,14 +79,13 @@ long	*convert(t_stack *a)
 
 int	sort(long *tab, int len)
 {
-	int j;
-	int i = 0;
+	int	j;
+	int	i;
 
 	while (len != 0)
 	{
 		i = 0;
 		j = i + 1;
-		;
 		while (j < len)
 		{
 			if (tab[i] > tab[j])
