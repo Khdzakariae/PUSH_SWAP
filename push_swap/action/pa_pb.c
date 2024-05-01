@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:48:38 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/04/28 18:48:41 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:26:31 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,32 @@ void	pop_b(t_stack **b)
 	free(temp);
 }
 
-void	pb(t_stack **b, t_stack **a)
+void pb(t_stack **b, t_stack **a)
 {
-	t_stack	*temp;
+    t_stack *temp;
 
-	if (!*a)
-		return ;
-	temp = malloc(sizeof(t_stack));
-	temp->cont = (*a)->cont;
-	temp->next = *b;
-	*b = temp;
-	pop_b(&(*a));
-	ft_printf("pb\n");
+    if (!*a)
+        return;
+    
+    temp = *a;
+    *a = (*a)->next;
+    temp->next = *b;
+    *b = temp;
+
+    ft_printf("pb\n");
 }
 
-void	pa(t_stack **b, t_stack **a)
+void pa(t_stack **b, t_stack **a)
 {
-	t_stack	*temp;
+    t_stack *temp;
 
-	if (!*b)
-		return ;
-	temp = malloc(sizeof(t_stack));
-	temp->cont = (*b)->cont;
-	temp->next = *a;
-	*a = temp;
-	pop_b(&(*b));
-	ft_printf("pa\n");
+    if (!*b)
+        return;
+
+    temp = *b;
+    *b = (*b)->next;
+    temp->next = *a;
+    *a = temp;
+
+    ft_printf("pa\n");
 }
