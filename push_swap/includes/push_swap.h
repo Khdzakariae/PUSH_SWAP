@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/04/28 18:51:08 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:31:18 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void				parrss(t_stack *a);
 void				print_list(t_stack *lst);
 
 void				add_node(t_stack **head, int data);
-void				_push(t_stack **a, t_stack **b, int ac, char **av);
+void				_push(t_stack **a, int ac, char **av);
 long				*convert(t_stack *a);
 int					sort(long *tab, int len);
 

@@ -6,7 +6,7 @@
 /*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:04:37 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/04/01 01:37:41 by useraccount      ###   ########.fr       */
+/*   Updated: 2024/05/01 14:34:44 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ long	ft_atoi(const char *str)
 		i++;
 	}
 	else if (str[i] == '+')
-	{
 		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		if ((result * 10) >= INT_MAX)

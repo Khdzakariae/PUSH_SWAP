@@ -1,7 +1,7 @@
 
 NAME = push_swap
 
-# FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 
 SRC =	push_swap.c resources/errores.c  resources/parisin1.c action/sa_sb_ss_.c \

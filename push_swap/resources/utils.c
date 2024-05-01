@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:48 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 13:43:24 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:30:56 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	add_node(t_stack **head, int data)
 	}
 }
 
-void	_push(t_stack **a, t_stack **b, int ac, char **av)
+void	_push(t_stack **a, int ac, char **av)
 {
 	char	**numbers;
 	int		i;
