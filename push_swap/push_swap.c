@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:16:55 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 14:32:14 by useraccount      ###   ########.fr       */
+/*   Updated: 2024/05/01 18:48:51 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
+
+void	print_list(t_stack *lst)
+{
+	while (lst != NULL)
+	{
+		printf("the list is : %ld \n", lst->cont);
+		lst = lst->next;
+	}
+	printf("\n");
+}
 
 void	free_stack(t_stack **stack)
 {
@@ -42,6 +52,7 @@ int	main(int ac, char **av)
 		tab = convert(a);
 		sort(tab, a->len);
 		push_swap(&a, &b, tab);
+		print_list(a);
 		free_stack(&a);
 		free(tab);
 		tab = NULL;
