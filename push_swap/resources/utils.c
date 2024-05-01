@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:48 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 14:30:56 by useraccount      ###   ########.fr       */
+/*   Updated: 2024/05/01 18:31:04 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	_push(t_stack **a, int ac, char **av)
 	int		k;
 	long	number;
 
-	k = 1;
+	k = 0;
 	i = 0;
-	while (k <= ac - 1)
+	while (++k <= ac - 1)
 	{
 		numbers = ft_split(av[k], ' ');
 		if (!*numbers)
@@ -56,7 +56,6 @@ void	_push(t_stack **a, int ac, char **av)
 			i++;
 		}
 		free(numbers);
-		k++;
 	}
 	numbers = NULL;
 }

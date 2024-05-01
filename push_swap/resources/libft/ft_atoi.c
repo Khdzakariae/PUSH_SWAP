@@ -3,26 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:04:37 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 14:34:44 by useraccount      ###   ########.fr       */
+/*   Updated: 2024/05/01 19:57:44 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_atoi(const char *str)
+void	generating_number(char **str, long *result)
+{
+	while (*(*str) && ft_isdigit(*(*str)))
+	{
+		if ((*result * 10) >= INT_MAX)
+			return ((void)(*result = 55147483647));
+		*result = *result * 10 + (*(*str) - '0');
+		(*str)++;
+	}
+}
+
+long	ft_atoi(char *str)
 {
 	long	result;
-	int	sign;
-	int	i;
+	int		sign;
+	int		i;
 
 	result = 0;
 	sign = 1;
 	i = 0;
 	if (!str[i])
-		return(55147483647);
+		return (55147483647);
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
 	if (str[i] == '-')
@@ -32,14 +43,9 @@ long	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		if ((result * 10) >= INT_MAX)
-			return(55147483647);
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	if (str[i] != '\0')
-		return(55147483647);
+	str += i;
+	generating_number(&str, &result);
+	if (*str)
+		return (55147483647);
 	return (result * sign);
 }

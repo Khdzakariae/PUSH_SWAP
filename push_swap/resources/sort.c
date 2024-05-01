@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:26 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/04/28 18:56:27 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:59:18 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ void	sort_numer_2(t_stack **a)
 	else
 		return ;
 }
+
 void	sort_numer_3(t_stack **a)
 {
 	t_stack	*big;
 
 	big = searching_biggest(*a);
 	if (*a == big)
-		rra(&(*a));
+		ra(&(*a));
 	else if ((*a)->next == big)
 		rra(&(*a));
 	if ((*a)->cont > (*a)->next->cont)
@@ -38,23 +39,19 @@ void	sort_numer_5(t_stack **a, t_stack **b)
 	int		i;
 	t_stack	*tmp;
 
-	min = searching_minimum(*a);
 	i = 0;
-	tmp = *a;
 	while (i < 2)
 	{
-		is_top(*a);
-		min = searching_minimum(*a);
-		while ((*a) != min)
+		tmp = (*a);
+		min = searching_minimum(tmp);
+		while (*a != min)
 		{
-			if (tmp->top == 0)
-				rra(a);
-			else
+			if ((min->index) <= (((tmp)->len / 2)))
 				ra(a);
+			else if ((min->index) > (((tmp)->len / 2)))
+				rra(a);
 		}
-		if ((*a) == min)
-			pb(b, a);
-		tmp = tmp->next;
+		pb(b, a);
 		i++;
 	}
 	sort_numer_3(a);
@@ -93,10 +90,11 @@ void	determine_end_value(int lent, int *end)
 	else if (lent > 10 && lent <= 100)
 		*end = 10;
 	else if (lent > 100 && lent <= 500)
-		*end = 30;
+		*end = 35;
 	else
 		*end = 40;
 }
+
 void	update_indices(int *start, int *end, int lent)
 {
 	if (*end < lent)
@@ -105,6 +103,7 @@ void	update_indices(int *start, int *end, int lent)
 		(*end)++;
 	}
 }
+
 void	sort_numer(t_stack **a, t_stack **b, long *tab, int lent)
 {
 	static int	start;

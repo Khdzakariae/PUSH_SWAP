@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:29:02 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 13:31:50 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:47:26 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,5 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *s);
 
-long				ft_atoi(const char *str);
+long				ft_atoi(char *str);
 #endif
