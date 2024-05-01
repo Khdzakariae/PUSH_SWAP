@@ -1,61 +1,50 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/01 14:16:55 by zel-khad          #+#    #+#             */
+/*   Updated: 2024/05/01 14:18:30 by zel-khad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
-void free_stack(t_stack **stack) 
+void	free_stack(t_stack **stack)
 {
-    t_stack *current = *stack;
-    t_stack *next;
+	t_stack	*current;
+	t_stack	*next;
 
-    while (current != NULL) {
-        next = current->next;
-        free(current);
-        current = next;
-    }
-    *stack = NULL;
-}
-void	print_list(t_stack *lst)
-{
-	while (lst != NULL)
+	current = *stack;
+	while (current != NULL)
 	{
-		printf("the list is : %ld \n", lst->cont);
-		lst = lst->next;
+		next = current->next;
+		free(current);
+		current = next;
 	}
-	printf("\n");
-}
-
-void	_printt(int *tab, int len)
-{
-	int	i;
-
-	i = 0;
-	while (i < len)
-	{
-		printf("%i\n", tab[i]);
-		i++;
-	}
+	*stack = NULL;
 }
 
 int	main(int ac, char **av)
 {
-	t_stack *a;
-	t_stack *b;
+	t_stack	*a;
+	t_stack	*b;
+	long	*tab;
+
 	a = NULL;
 	b = NULL;
-
 	if (ac > 2)
 	{
 		_push(&a, &b, ac, av);
 		parrss(a);
-		long *tab = convert(a);
+		tab = convert(a);
 		sort(tab, a->len);
 		push_swap(&a, &b, tab);
 		free_stack(&a);
-	
 		free(tab);
 		tab = NULL;
-		// puts("==== stack a =====\n");
-		// print_list(a);
-		// puts("==== stack b =====\n");
-		// print_list(b);
 	}
 	else
 		print_error(1);

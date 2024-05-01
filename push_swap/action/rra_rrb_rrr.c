@@ -37,47 +37,39 @@ void	_free(t_stack **head)
 	free(temp1);
 }
 
-void rra(t_stack **a)
+void	rra(t_stack **a)
 {
-    t_stack *tmp;
-    t_stack *last;
+	t_stack	*tmp;
+	t_stack	*last;
 
-    if (!*a || !(*a)->next)
-        return;
-
-    ft_printf("rra\n");
-
-    tmp = *a;
-    while (tmp->next->next != NULL)
-        tmp = tmp->next;
-    
-    last = tmp->next;
-    tmp->next = NULL;
-    last->next = *a;
-    *a = last;
+	if (!*a || !(*a)->next)
+		return ;
+	ft_printf("rra\n");
+	tmp = *a;
+	while (tmp->next->next != NULL)
+		tmp = tmp->next;
+	last = tmp->next;
+	tmp->next = NULL;
+	last->next = *a;
+	*a = last;
 }
 
-
-void rrb(t_stack **b)
+void	rrb(t_stack **b)
 {
-    t_stack *tmp;
-    t_stack *last;
+	t_stack	*tmp;
+	t_stack	*last;
 
-    if (!*b || !(*b)->next)
-        return;
-
-    ft_printf("rrb\n");
-
-    tmp = *b;
-    while (tmp->next->next != NULL)
-        tmp = tmp->next;
-    
-    last = tmp->next;
-    tmp->next = NULL;
-    last->next = *b;
-    *b = last;
+	if (!*b || !(*b)->next)
+		return ;
+	ft_printf("rrb\n");
+	tmp = *b;
+	while (tmp->next->next != NULL)
+		tmp = tmp->next;
+	last = tmp->next;
+	tmp->next = NULL;
+	last->next = *b;
+	*b = last;
 }
-
 
 void	rrr(t_stack **b, t_stack **a)
 {

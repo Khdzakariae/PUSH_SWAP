@@ -23,32 +23,28 @@ void	pop_b(t_stack **b)
 	free(temp);
 }
 
-void pb(t_stack **b, t_stack **a)
+void	pb(t_stack **b, t_stack **a)
 {
-    t_stack *temp;
+	t_stack	*temp;
 
-    if (!*a)
-        return;
-    
-    temp = *a;
-    *a = (*a)->next;
-    temp->next = *b;
-    *b = temp;
-
-    ft_printf("pb\n");
+	if (!*a)
+		return ;
+	temp = *a;
+	*a = (*a)->next;
+	temp->next = *b;
+	*b = temp;
+	ft_printf("pb\n");
 }
 
-void pa(t_stack **b, t_stack **a)
+void	pa(t_stack **b, t_stack **a)
 {
-    t_stack *temp;
+	t_stack	*temp;
 
-    if (!*b)
-        return;
-
-    temp = *b;
-    *b = (*b)->next;
-    temp->next = *a;
-    *a = temp;
-
-    ft_printf("pa\n");
+	if (!*b)
+		return ;
+	temp = *b;
+	*b = (*b)->next;
+	temp->next = *a;
+	*a = temp;
+	ft_printf("pa\n");
 }
