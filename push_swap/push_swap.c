@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:16:55 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 18:48:51 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/01 20:01:15 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ int	main(int ac, char **av)
 		tab = convert(a);
 		sort(tab, a->len);
 		push_swap(&a, &b, tab);
-		print_list(a);
 		free_stack(&a);
 		free(tab);
 		tab = NULL;
