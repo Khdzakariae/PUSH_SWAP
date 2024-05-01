@@ -1,5 +1,17 @@
 #include "includes/push_swap.h"
 
+void free_stack(t_stack **stack) 
+{
+    t_stack *current = *stack;
+    t_stack *next;
+
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    *stack = NULL;
+}
 void	print_list(t_stack *lst)
 {
 	while (lst != NULL)
@@ -36,6 +48,10 @@ int	main(int ac, char **av)
 		long *tab = convert(a);
 		sort(tab, a->len);
 		push_swap(&a, &b, tab);
+		free_stack(&a);
+	
+		free(tab);
+		tab = NULL;
 		// puts("==== stack a =====\n");
 		// print_list(a);
 		// puts("==== stack b =====\n");

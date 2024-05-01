@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:29:02 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/04/28 19:02:50 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/01 13:31:50 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <limits.h>
 # include <stddef.h>
+#include  <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
