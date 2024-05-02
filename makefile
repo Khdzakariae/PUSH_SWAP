@@ -17,6 +17,7 @@ LIBFT = resources/libft/libft.a
 FT_PRINTF = resources/ft_printf/libftprintf.a
 
 all: lib $(NAME)
+	@echo "push_swap done [ ✅ ]"
 
 bonus: lib $(NAME_BONUS)
 	@echo "push_swap_bonus done [ ✅ ]"
