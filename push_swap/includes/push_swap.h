@@ -56,28 +56,25 @@ void				sort_numer_2(t_stack **a);
 void				sort_numer_3(t_stack **a);
 void				sort_numer_5(t_stack **a, t_stack **b);
 
-
-void	part2(t_stack **a, t_stack **b);
-void	update_indices(int *start, int *end, int lent);
-void	determine_end_value(int lent, int *end);
-void	sort_numer(t_stack **a, t_stack **b, long *tab, int lent);
-
+void				part2(t_stack **a, t_stack **b);
+void				update_indices(int *start, int *end, int lent);
+void				determine_end_value(int lent, int *end);
+void				sort_numer(t_stack **a, t_stack **b, long *tab, int lent);
 
 t_stack				*searching_biggest(t_stack *a);
 t_stack				*searching_minimum(t_stack *a);
 
-void	pb(t_stack **b, t_stack **a, int flag);
-void	pa(t_stack **b, t_stack **a, int flag);
-void	ra(t_stack **a, int flag);
-void	rb(t_stack **b, int flag);
-void	rr(t_stack **b, t_stack **a, int flag);
-void	rra(t_stack **a, int flag);
-void	rrb(t_stack **b, int flag);
-void	rrr(t_stack **b, t_stack **a, int flag);
-void	sa(t_stack **a, int flag);
-void	sb(t_stack **b, int flag);
-void	ss(t_stack **a, t_stack **b, int flag);
-
+void				pb(t_stack **b, t_stack **a, int flag);
+void				pa(t_stack **b, t_stack **a, int flag);
+void				ra(t_stack **a, int flag);
+void				rb(t_stack **b, int flag);
+void				rr(t_stack **b, t_stack **a, int flag);
+void				rra(t_stack **a, int flag);
+void				rrb(t_stack **b, int flag);
+void				rrr(t_stack **b, t_stack **a, int flag);
+void				sa(t_stack **a, int flag);
+void				sb(t_stack **b, int flag);
+void				ss(t_stack **a, t_stack **b, int flag);
 
 void				print_error(int i);
 int					cheack(int *values, int sise, char **av);
