@@ -6,15 +6,18 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:52:18 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 11:32:57 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:52:09 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	exit_(char **numbers)
+void	exit_(char **numbers, t_stack **a)
 {
-	free(*numbers);
+
+	ft_putstr_fd(RED "ERROR\n", 2);
+	free_stack(a);
+	free(numbers);
 	exit(12);
 }
 

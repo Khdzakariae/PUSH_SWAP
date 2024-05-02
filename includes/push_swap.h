@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 11:26:02 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:46:38 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-void				exit_(char **numbers);
+void	exit_(char **numbers, t_stack **a);
+
 void				print_error(int i, t_stack **a);
 void				cheack_sort(t_stack **head);
 void				cheack_repet(t_stack **head);
