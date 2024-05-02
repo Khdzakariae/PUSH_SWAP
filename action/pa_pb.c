@@ -16,8 +16,8 @@ void	pb(t_stack **b, t_stack **a, int flag)
 {
 	t_stack	*temp;
 
-	if (! (*a))
-		return;
+	if (!(*a))
+		return ;
 	temp = *a;
 	*a = (*a)->next;
 	temp->next = *b;

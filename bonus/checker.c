@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 16:27:59 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:47:45 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	cheacker_sort(t_stack **head, t_stack **b)
 	}
 	if (tmp->next == NULL || (*b))
 		ft_printf("OK\n");
-	
 	return ;
 }
 
@@ -77,21 +76,20 @@ void	checker(t_stack **a, t_stack **b)
 		str = get_next_line(0);
 	}
 	cheacker_sort(a, b);
-
 }
 
-void print(t_stack *a)
+void	print(t_stack *a)
 {
 	if (!a)
-		return;
+		return ;
 	printf("%ld\n", a->cont);
 	print(a->next);
 }
 
 int	main(int ac, char **av)
 {
-	t_stack *a;
-	t_stack *b;
+	t_stack	*a;
+	t_stack	*b;
 
 	a = NULL;
 	b = NULL;
