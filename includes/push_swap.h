@@ -38,11 +38,11 @@ typedef struct s_stack
 
 void				exit_(char **numbers);
 void				print_error(int i, t_stack **a);
-void	cheack_sort(t_stack **head);
-void	cheack_repet(t_stack **head);
+void				cheack_sort(t_stack **head);
+void				cheack_repet(t_stack **head);
 void				len(t_stack *head);
 void				is_top(t_stack *head);
-void	parrss(t_stack **a);
+void				parrss(t_stack **a);
 
 void				print_list(t_stack *lst);
 

@@ -31,7 +31,7 @@ void	cheack_sort(t_stack **head)
 void	cheack_repet(t_stack **head)
 {
 	t_stack	*tmp;
-	t_stack *tmp1;
+	t_stack	*tmp1;
 
 	tmp = *head;
 	tmp1 = *head;
@@ -44,7 +44,7 @@ void	cheack_repet(t_stack **head)
 				print_error(1, head);
 			tmp = tmp->next;
 		}
-		tmp1= tmp1->next;
+		tmp1 = tmp1->next;
 	}
 	return ;
 }
