@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 14:31:18 by useraccount      ###   ########.fr       */
+/*   Updated: 2024/05/02 09:37:06 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,17 +60,18 @@ void				sort_numer(t_stack **a, t_stack **b, long *tab, int lent);
 t_stack				*searching_biggest(t_stack *a);
 t_stack				*searching_minimum(t_stack *a);
 
-void				sa(t_stack **a);
-void				sb(t_stack **b);
-void				ss(t_stack **a, t_stack **b);
-void				pb(t_stack **b, t_stack **a);
-void				pa(t_stack **b, t_stack **a);
-void				ra(t_stack **a);
-void				rb(t_stack **b);
-void				rr(t_stack **a, t_stack **b);
-void				rra(t_stack **a);
-void				rrb(t_stack **b);
-void				rrr(t_stack **b, t_stack **a);
+void	pb(t_stack **b, t_stack **a, int flag);
+void	pa(t_stack **b, t_stack **a, int flag);
+void	ra(t_stack **a, int flag);
+void	rb(t_stack **b, int flag);
+void	rr(t_stack **b, t_stack **a, int flag);
+void	rra(t_stack **a, int flag);
+void	rrb(t_stack **b, int flag);
+void	rrr(t_stack **b, t_stack **a, int flag);
+void	sa(t_stack **a, int flag);
+void	sb(t_stack **b, int flag);
+void	ss(t_stack **a, t_stack **b, int flag);
+
 
 void				print_error(int i);
 int					cheack(int *values, int sise, char **av);

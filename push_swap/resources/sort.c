@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:26 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 19:59:18 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 09:39:35 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_numer_2(t_stack **a)
 {
 	if ((*a)->cont > (*a)->next->cont)
-		sa(&(*a));
+		sa(&(*a), 1);
 	else
 		return ;
 }
@@ -26,11 +26,11 @@ void	sort_numer_3(t_stack **a)
 
 	big = searching_biggest(*a);
 	if (*a == big)
-		ra(&(*a));
+		ra(&(*a), 1);
 	else if ((*a)->next == big)
-		rra(&(*a));
+		rra(&(*a), 1);
 	if ((*a)->cont > (*a)->next->cont)
-		sa(a);
+		sa(a, 1);
 }
 
 void	sort_numer_5(t_stack **a, t_stack **b)
@@ -47,16 +47,16 @@ void	sort_numer_5(t_stack **a, t_stack **b)
 		while (*a != min)
 		{
 			if ((min->index) <= (((tmp)->len / 2)))
-				ra(a);
+				ra(a, 1);
 			else if ((min->index) > (((tmp)->len / 2)))
-				rra(a);
+				rra(a, 1);
 		}
-		pb(b, a);
+		pb(b, a, 1);
 		i++;
 	}
 	sort_numer_3(a);
 	while (*b != NULL)
-		pa(b, a);
+		pa(b, a, 1);
 }
 
 void	part2(t_stack **a, t_stack **b)
@@ -74,12 +74,12 @@ void	part2(t_stack **a, t_stack **b)
 		if (*b != big)
 		{
 			if ((big->index) <= (((tmp)->len / 2)))
-				rb(b);
+				rb(b, 1);
 			else if ((big->index) > (((tmp)->len / 2)))
-				rrb(b);
+				rrb(b, 1);
 		}
 		if (*b == big)
-			pa(b, a);
+			pa(b, a, 1);
 	}
 }
 
@@ -116,18 +116,18 @@ void	sort_numer(t_stack **a, t_stack **b, long *tab, int lent)
 	{
 		if (((tmp)->cont >= tab[start] && (tmp)->cont <= tab[end]))
 		{
-			pb(b, a);
+			pb(b, a, 1);
 			update_indices(&start, &end, lent);
 		}
 		else if ((tmp)->cont < tab[start])
 		{
-			pb(b, a);
-			rb(b);
+			pb(b, a, 1);
+			rb(b, 1);
 			if (end < lent)
 				update_indices(&start, &end, lent);
 		}
 		else
-			ra(a);
+			ra(a, 1);
 		tmp = *a;
 	}
 	part2(a, b);

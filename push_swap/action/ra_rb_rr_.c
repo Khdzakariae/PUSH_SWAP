@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ra_rb_rr_.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:48:59 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 13:23:42 by useraccount      ###   ########.fr       */
+/*   Updated: 2024/05/02 09:30:47 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ra(t_stack **a)
+void	ra(t_stack **a, int flag)
 {
 	t_stack	*tmp;
 	t_stack	*tr;
@@ -26,10 +26,11 @@ void	ra(t_stack **a)
 		tmp = tmp->next;
 	tmp->next = tr;
 	tr->next = NULL;
-	ft_printf("ra\n");
+	if (flag == 1)
+		ft_printf("ra\n");
 }
 
-void	rb(t_stack **b)
+void	rb(t_stack **b, int flag)
 {
 	t_stack	*tmp;
 	t_stack	*tr;
@@ -43,12 +44,14 @@ void	rb(t_stack **b)
 		tmp = tmp->next;
 	tmp->next = tr;
 	tr->next = NULL;
-	ft_printf("rb\n");
+	if (flag == 1)
+		ft_printf("rb\n");
 }
 
-void	rr(t_stack **b, t_stack **a)
+void	rr(t_stack **b, t_stack **a, int flag)
 {
-	ra(&(*a));
-	rb(&(*b));
-	ft_printf("rr\n");
+	ra(&(*a), 0);
+	rb(&(*b), 0);
+	if (flag == 1)
+		ft_printf("rr\n");
 }

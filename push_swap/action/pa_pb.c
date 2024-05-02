@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
+/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:48:38 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 13:26:31 by useraccount      ###   ########.fr       */
+/*   Updated: 2024/05/02 09:31:42 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	pop_b(t_stack **b)
 	free(temp);
 }
 
-void	pb(t_stack **b, t_stack **a)
+void	pb(t_stack **b, t_stack **a, int flag)
 {
 	t_stack	*temp;
 
@@ -33,10 +33,11 @@ void	pb(t_stack **b, t_stack **a)
 	*a = (*a)->next;
 	temp->next = *b;
 	*b = temp;
-	ft_printf("pb\n");
+	if (flag == 1)
+		ft_printf("pb\n");
 }
 
-void	pa(t_stack **b, t_stack **a)
+void	pa(t_stack **b, t_stack **a, int flag)
 {
 	t_stack	*temp;
 
@@ -46,5 +47,6 @@ void	pa(t_stack **b, t_stack **a)
 	*b = (*b)->next;
 	temp->next = *a;
 	*a = temp;
-	ft_printf("pa\n");
+	if (flag == 1)
+		ft_printf("pa\n");
 }
