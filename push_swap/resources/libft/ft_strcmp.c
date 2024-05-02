@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:16:55 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 10:44:13 by zel-khad         ###   ########.fr       */
+/*   Created: 2024/05/02 10:28:08 by zel-khad          #+#    #+#             */
+/*   Updated: 2024/05/02 11:04:43 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "libft.h"
 
-int	main(int ac, char **av)
+int	ft_strcmp(char *s1, char *s2)
 {
-	t_stack	*a;
-	t_stack	*b;
-	long	*tab;
+	int	i;
 
-	a = NULL;
-	b = NULL;
-	if (ac > 2)
-	{
-		_push(&a, ac, av);
-		parrss(a);
-		tab = convert(a);
-		sort(tab, a->len);
-		push_swap(&a, &b, tab);
-		free_stack(&a);
-		free(tab);
-		tab = NULL;
-	}
-	else
-		exit(1);
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }

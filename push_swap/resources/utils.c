@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:48 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 09:52:03 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 11:00:44 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ void	_push(t_stack **a, int ac, char **av)
 	{
 		numbers = ft_split(av[k], ' ');
 		if (!*numbers)
-			print_error(4);
+			exit_(numbers);
 		i = 0;
 		while (numbers[i] != NULL)
 		{
 			number = ft_atoi(numbers[i]);
 			free(numbers[i]);
 			if ((number > INT_MAX) || (number < INT_MIN))
-				print_error(2);
+				print_error(1, a);
 			add_node(&(*a), number);
 			i++;
 		}

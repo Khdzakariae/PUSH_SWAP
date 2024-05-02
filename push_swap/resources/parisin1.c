@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:53 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/04/28 18:53:04 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 10:59:56 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	cheack_sort(t_stack *head)
 		tmp = tmp->next;
 	}
 	if (tmp->next == NULL)
-		print_error(5);
+		print_error(2, &head);
 	return ;
 }
 
@@ -39,7 +39,7 @@ void	cheack_repet(t_stack *head)
 		while (tmp->next)
 		{
 			if ((head->cont) == (tmp->next->cont))
-				print_error(3);
+				print_error(2, &head);
 			tmp = tmp->next;
 		}
 		head = head->next;

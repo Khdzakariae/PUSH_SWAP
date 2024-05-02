@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:29:02 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 19:47:26 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 10:29:00 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					ft_strcmp(char *s1, char *s2);
 
 char				*ft_itoa(int n);
 char				**ft_split(char const *s, char c);

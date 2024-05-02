@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 09:51:46 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 10:56:03 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 // ========================================//
 
 # include "../resources/ft_printf/ft_printf.h"
+# include "../resources/get_next_line/get_next_line.h"
 # include "../resources/libft/libft.h"
 
 typedef struct s_stack
@@ -35,6 +36,8 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
+void				exit_(char **numbers);
+void				print_error(int i, t_stack **a);
 void				cheack_sort(t_stack *head);
 void				cheack_repet(t_stack *head);
 void				len(t_stack *head);
@@ -78,7 +81,6 @@ void				ss(t_stack **a, t_stack **b, int flag);
 
 void				free_stack(t_stack **stack);
 
-void				print_error(int i);
 int					cheack(int *values, int sise, char **av);
 
 #endif

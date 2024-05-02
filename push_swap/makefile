@@ -6,7 +6,8 @@ FLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 
 SRC =	push_swap.c resources/errores.c  resources/parisin1.c action/sa_sb_ss_.c \
 		action/pa_pb.c action/ra_rb_rr_.c action/rra_rrb_rrr.c resources/searching.c \
-		resources/sort.c resources/utils.c resources/sort_number.c
+		resources/sort.c resources/utils.c resources/sort_number.c resources/get_next_line/get_next_line.c \
+		resources/get_next_line/get_next_line_utils.c
 
 LIBFT = resources/libft/libft.a
 FT_PRINTF = resources/ft_printf/libftprintf.a
