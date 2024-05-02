@@ -6,17 +6,17 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:53 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 10:59:56 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 11:39:16 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	cheack_sort(t_stack *head)
+void	cheack_sort(t_stack **head)
 {
 	t_stack	*tmp;
 
-	tmp = head;
+	tmp = (*head);
 	while (tmp->next)
 	{
 		if (!((tmp->cont) < (tmp->next->cont)))
@@ -24,25 +24,27 @@ void	cheack_sort(t_stack *head)
 		tmp = tmp->next;
 	}
 	if (tmp->next == NULL)
-		print_error(2, &head);
+		print_error(1, head);
 	return ;
 }
 
-void	cheack_repet(t_stack *head)
+void	cheack_repet(t_stack **head)
 {
 	t_stack	*tmp;
+	t_stack *tmp1;
 
-	tmp = head;
-	while (head->next)
+	tmp = *head;
+	tmp1 = *head;
+	while (tmp1->next)
 	{
-		tmp = head;
+		tmp = tmp1;
 		while (tmp->next)
 		{
-			if ((head->cont) == (tmp->next->cont))
-				print_error(2, &head);
+			if ((tmp1->cont) == (tmp->next->cont))
+				print_error(1, head);
 			tmp = tmp->next;
 		}
-		head = head->next;
+		tmp1= tmp1->next;
 	}
 	return ;
 }
@@ -84,7 +86,7 @@ void	is_top(t_stack *head)
 	}
 }
 
-void	parrss(t_stack *a)
+void	parrss(t_stack **a)
 {
 	cheack_repet(a);
 	cheack_sort(a);
