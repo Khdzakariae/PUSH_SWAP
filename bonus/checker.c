@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 15:24:40 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:27:59 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	cheacker_sort(t_stack **head, t_stack **b)
 {
 	t_stack	*tmp;
 
+	if (!(*head))
+	{
+		ft_printf("KO\n");
+		return ;
+	}
 	tmp = (*head);
 	while (tmp->next)
 	{
@@ -26,12 +31,7 @@ void	cheacker_sort(t_stack **head, t_stack **b)
 		}
 		tmp = tmp->next;
 	}
-	if  ((*b))
-	{
-		ft_printf("KO\n");
-		return ;
-	}
-	if (tmp->next == NULL)
+	if (tmp->next == NULL || (*b))
 		ft_printf("OK\n");
 	
 	return ;
@@ -39,7 +39,7 @@ void	cheacker_sort(t_stack **head, t_stack **b)
 
 void	checker_generete(t_stack **a, t_stack **b, char *str)
 {
-	if (ft_strcmp(str, "pa/n") == 0)
+	if (ft_strcmp(str, "pa\n") == 0)
 		pa(b, a, 0);
 	else if (ft_strcmp(str, "pb\n") == 0)
 		pb(b, a, 0);
@@ -100,7 +100,6 @@ int	main(int ac, char **av)
 		_push(&a, ac, av);
 		parrss(&a);
 		checker(&a, &b);
-		print(a);
 		free_stack(&a);
 	}
 	else

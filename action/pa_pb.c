@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:48:38 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 15:25:11 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:20:41 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	pb(t_stack **b, t_stack **a, int flag)
 {
 	t_stack	*temp;
 
-	if ((*a) == NULL)
+	if (! (*a))
 		return;
 	temp = *a;
 	*a = (*a)->next;

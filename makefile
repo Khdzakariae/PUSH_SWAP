@@ -1,5 +1,5 @@
 NAME = push_swap
-NAME_BONUS = push_swap_bonus
+NAME_BONUS = checker
 
 FLAGS = -Wall -Wextra -Werror -g  # Added -g for debugging symbols
 
@@ -22,7 +22,7 @@ bonus: lib $(NAME_BONUS)
 	@echo "push_swap_bonus done [ ✅ ]"
 
 $(NAME_BONUS): $(SRC_CHECKER)
-	@cc $^ $(FLAGS) $(LIBFT) $(FT_PRINTF) -o push_swap_bonus
+	@cc $^ $(FLAGS) $(LIBFT) $(FT_PRINTF) -o checker
 
 $(NAME): $(SRC_PUSH_SWAP)
 	@cc $^ $(FLAGS) $(LIBFT) $(FT_PRINTF) -o push_swap
@@ -39,7 +39,7 @@ clean:
 fclean: clean
 	@make fclean -C resources/ft_printf --no-print-directory
 	@make fclean -C resources/libft --no-print-directory
-	@rm -f push_swap push_swap_bonus
+	@rm -f push_swap checker
 	@echo "fclean [ ✅ ]"
 
 re: fclean all
