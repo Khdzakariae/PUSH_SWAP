@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 13:19:08 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:44:10 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	cheacker_sort(t_stack **head)
 	tmp = (*head);
 	while (tmp->next)
 	{
-		if (!((tmp->cont) < (tmp->next->cont)))
+		if (!((tmp->cont) > (tmp->next->cont)))
 		{
 			ft_printf("KO\n");
 			break ;
