@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 09:37:06 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 09:47:47 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,13 @@ void				push_swap(t_stack **a, t_stack **b, long *tab);
 void				sort_numer_2(t_stack **a);
 void				sort_numer_3(t_stack **a);
 void				sort_numer_5(t_stack **a, t_stack **b);
-void				sort_numer(t_stack **a, t_stack **b, long *tab, int lent);
+
+
+void	part2(t_stack **a, t_stack **b);
+void	update_indices(int *start, int *end, int lent);
+void	determine_end_value(int lent, int *end);
+void	sort_numer(t_stack **a, t_stack **b, long *tab, int lent);
+
 
 t_stack				*searching_biggest(t_stack *a);
 t_stack				*searching_minimum(t_stack *a);
