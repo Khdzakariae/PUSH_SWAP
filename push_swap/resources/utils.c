@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:48 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/01 18:31:04 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 09:52:03 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,19 @@ int	sort(long *tab, int len)
 		len--;
 	}
 	return (*tab);
+}
+
+void	free_stack(t_stack **stack)
+{
+	t_stack	*current;
+	t_stack	*next;
+
+	current = *stack;
+	while (current != NULL)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	*stack = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 09:47:47 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/02 09:51:46 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ void				rrr(t_stack **b, t_stack **a, int flag);
 void				sa(t_stack **a, int flag);
 void				sb(t_stack **b, int flag);
 void				ss(t_stack **a, t_stack **b, int flag);
+
+void				free_stack(t_stack **stack);
 
 void				print_error(int i);
 int					cheack(int *values, int sise, char **av);
