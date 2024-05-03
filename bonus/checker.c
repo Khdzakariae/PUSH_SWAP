@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 11:04:28 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:23:44 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	cheacker_sort(t_stack **head, t_stack **b)
 {
 	t_stack	*tmp;
 
+	tmp = (*head);
 	if (!(*head))
 	{
 		ft_printf("KO\n");
 		return ;
 	}
-	tmp = (*head);
 	while (tmp->next)
 	{
 		if (!((tmp->cont) < (tmp->next->cont)))
@@ -32,7 +32,7 @@ void	cheacker_sort(t_stack **head, t_stack **b)
 		tmp = tmp->next;
 	}
 	if ((*b) != NULL)
-		ft_printf("KO\n");	
+		ft_printf("KO\n");
 	else if (tmp->next == NULL)
 		ft_printf("OK\n");
 	return ;
