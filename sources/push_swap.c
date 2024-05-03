@@ -6,11 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:16:55 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 11:22:28 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:18:18 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 int	main(int ac, char **av)
 {
@@ -23,7 +23,7 @@ int	main(int ac, char **av)
 	if (ac > 2)
 	{
 		_push(&a, ac, av);
-		parrss(&a);
+		parrss(&a, 1);
 		tab = convert(a);
 		sort(tab, a->len);
 		push_swap(&a, &b, tab);

@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:48 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 18:46:11 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:04:55 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	_push(t_stack **a, int ac, char **av)
 			if ((number > INT_MAX) || (number < INT_MIN))
 			{
 				free(numbers);
-				print_error(1, a);
+				print_error(a);
 			}
 			add_node(&(*a), number);
 			i++;

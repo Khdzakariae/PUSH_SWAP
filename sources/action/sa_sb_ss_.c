@@ -6,11 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:49:47 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 09:33:52 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:18:52 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	ft_swap(long *a, long *b)
 {

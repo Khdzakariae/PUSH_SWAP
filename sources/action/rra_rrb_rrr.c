@@ -6,11 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:49:22 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 09:42:06 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:18:48 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	rra(t_stack **a, int flag)
 {
