@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:16:55 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 11:18:18 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:13:50 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int ac, char **av)
 
 	a = NULL;
 	b = NULL;
-	if (ac > 2)
+	if (ac > 1)
 	{
 		_push(&a, ac, av);
 		parrss(&a, 1);

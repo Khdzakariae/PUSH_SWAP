@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 11:17:48 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:18:07 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void				sb(t_stack **b, int flag);
 void				ss(t_stack **a, t_stack **b, int flag);
 
 void				exit_(char **numbers, t_stack **a);
-void				print_error(t_stack **a);
+void				print_error(t_stack **a, int flag);
 
 void				cheack_sort(t_stack **head);
 void				cheack_repet(t_stack **head);

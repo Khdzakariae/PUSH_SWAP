@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 11:23:44 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:16:07 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	checker_generete(t_stack **a, t_stack **b, char *str)
 	else if (ft_strcmp(str, "ss\n") == 0)
 		ss(a, b, 0);
 	else
-		print_error(a);
+		print_error(a, 0);
 }
 
 void	checker(t_stack **a, t_stack **b)
