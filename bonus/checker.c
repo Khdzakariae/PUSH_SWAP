@@ -6,22 +6,17 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 12:23:33 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:13:19 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	cheacker_sort(t_stack **head, t_stack **b)
+void	cheacker_sort(t_stack **head)
 {
 	t_stack	*tmp;
 
 	tmp = (*head);
-	if (!(*head))
-	{
-		ft_printf("KO\n");
-		return ;
-	}
 	while (tmp->next)
 	{
 		if (!((tmp->cont) < (tmp->next->cont)))
@@ -31,9 +26,7 @@ void	cheacker_sort(t_stack **head, t_stack **b)
 		}
 		tmp = tmp->next;
 	}
-	if ((*b) != NULL)
-		ft_printf("KO\n");
-	else if (tmp->next == NULL)
+	if (tmp->next == NULL)
 		ft_printf("OK\n");
 	return ;
 }
@@ -77,7 +70,12 @@ void	checker(t_stack **a, t_stack **b)
 		free(str);
 		str = get_next_line(0);
 	}
-	cheacker_sort(a, b);
+	if ((*b) || !(*a))
+	{
+		ft_printf("KO\n");
+		return ;
+	}
+	cheacker_sort(a);
 }
 
 int	main(int ac, char **av)
