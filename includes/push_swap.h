@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:51:06 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 12:18:07 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/04 12:06:12 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
+void _checker_error(t_stack **a, t_stack **b, char *str);
 void				ft_swap(long *a, long *b);
 void				pb(t_stack **b, t_stack **a, int flag);
 void				pa(t_stack **b, t_stack **a, int flag);

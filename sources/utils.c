@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:48 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 11:29:16 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/04 11:42:51 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,8 @@ void	free_stack(t_stack **stack)
 	t_stack	*current;
 	t_stack	*next;
 
+	if (!(*stack))
+		return ;
 	current = *stack;
 	while (current != NULL)
 	{

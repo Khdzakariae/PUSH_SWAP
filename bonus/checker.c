@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/03 16:13:19 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/04 12:31:56 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	cheacker_sort(t_stack **head)
 	return ;
 }
 
-void	checker_generete(t_stack **a, t_stack **b, char *str)
+void	checker_generate(t_stack **a, t_stack **b, char *str)
 {
 	if (ft_strcmp(str, "pa\n") == 0)
 		pa(b, a, 0);
@@ -56,7 +56,7 @@ void	checker_generete(t_stack **a, t_stack **b, char *str)
 	else if (ft_strcmp(str, "ss\n") == 0)
 		ss(a, b, 0);
 	else
-		print_error(a, 0);
+		_checker_error(a, b, str);
 }
 
 void	checker(t_stack **a, t_stack **b)
@@ -66,7 +66,7 @@ void	checker(t_stack **a, t_stack **b)
 	str = get_next_line(0);
 	while (str)
 	{
-		checker_generete(a, b, str);
+		checker_generate(a, b, str);
 		free(str);
 		str = get_next_line(0);
 	}
