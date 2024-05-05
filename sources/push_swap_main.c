@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errores.c                                          :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 18:52:18 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/04 12:11:44 by zel-khad         ###   ########.fr       */
+/*   Created: 2024/05/01 14:16:55 by zel-khad          #+#    #+#             */
+/*   Updated: 2024/05/05 12:40:02 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	exit_(char **numbers, t_stack **a)
+int	main(int ac, char **av)
 {
-	ft_putstr_fd(RED "ERROR\n", 2);
-	free_stack(a);
-	free(numbers);
-	exit(12);
-}
+	t_stack	*a;
+	t_stack	*b;
+	long	*tab;
 
-void	print_error(t_stack **a, int flag)
-{
-	if (flag == 0)
-		ft_putstr_fd(RED "ERROR\n", 2);
-	free_stack(a);
-	exit(1);
-}
-
-void _checker_error(t_stack **a, t_stack **b, char *str)
-{
-	ft_putstr_fd(RED "ERROR\n", 2);
-	free_stack(a);
-	free_stack(b);
-	free(str);
-	exit(0);
+	a = NULL;
+	b = NULL;
+	if (ac > 1)
+	{
+		add_element_stack(&a, ac, av);
+		parse_stack(&a, 1);
+		tab = convert(a);
+		sort(tab, a->len);
+		push_swap(&a, &b, tab);
+		free_stack(&a);
+		free(tab);
+		tab = NULL;
+	}
+	else
+		exit(1);
 }

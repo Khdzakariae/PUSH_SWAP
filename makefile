@@ -3,14 +3,14 @@ NAME_BONUS = checker
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC_PUSH_SWAP = sources/push_swap.c sources/errores.c sources/parisin1.c sources/action/sa_sb_ss_.c \
+SRC_PUSH_SWAP = sources/push_swap_main.c sources/error_handling.c sources/argument_parser.c sources/action/sa_sb_ss_.c \
     sources/action/pa_pb.c sources/action/ra_rb_rr_.c sources/action/rra_rrb_rrr.c sources/searching.c \
-    sources/sort.c sources/utils.c sources/sort_number.c sources/get_next_line/get_next_line.c \
+    sources/sort_functions.c sources/utility_functions.c sources/number_sorting.c sources/get_next_line/get_next_line.c \
     sources/get_next_line/get_next_line_utils.c
 
-SRC_CHECKER = bonus/checker.c sources/errores.c sources/parisin1.c sources/action/sa_sb_ss_.c \
+SRC_CHECKER = bonus/checker.c sources/error_handling.c sources/argument_parser.c sources/action/sa_sb_ss_.c \
     sources/action/pa_pb.c sources/action/ra_rb_rr_.c sources/action/rra_rrb_rrr.c sources/searching.c \
-    sources/sort.c sources/utils.c sources/sort_number.c sources/get_next_line/get_next_line.c \
+    sources/sort_functions.c sources/utility_functions.c sources/number_sorting.c sources/get_next_line/get_next_line.c \
     sources/get_next_line/get_next_line_utils.c
 
 LIBFT = sources/libft/libft.a

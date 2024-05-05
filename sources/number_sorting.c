@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 09:44:49 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/04 11:14:07 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/05 12:42:18 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	determine_end_value(int lent, int *end)
 		*end = 40;
 }
 
-void	sort_numer(t_stack **a, t_stack **b, long *tab, int lent)
+void	sort_numbers(t_stack **a, t_stack **b, long *tab, int lent)
 {
 	static int	start;
 	int			end;

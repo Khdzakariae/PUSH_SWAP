@@ -6,13 +6,13 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:56:26 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/02 09:45:55 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/05 12:42:00 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	sort_numer_2(t_stack **a)
+void	sort_2numbers_in_stack(t_stack **a)
 {
 	if ((*a)->cont > (*a)->next->cont)
 		sa(&(*a), 1);
@@ -20,7 +20,7 @@ void	sort_numer_2(t_stack **a)
 		return ;
 }
 
-void	sort_numer_3(t_stack **a)
+void	sort_3numbers_in_stack(t_stack **a)
 {
 	t_stack	*big;
 
@@ -33,7 +33,7 @@ void	sort_numer_3(t_stack **a)
 		sa(a, 1);
 }
 
-void	sort_numer_5(t_stack **a, t_stack **b)
+void	sort_5numbers_in_stack(t_stack **a, t_stack **b)
 {
 	t_stack	*min;
 	int		i;
@@ -54,7 +54,7 @@ void	sort_numer_5(t_stack **a, t_stack **b)
 		pb(b, a, 1);
 		i++;
 	}
-	sort_numer_3(a);
+	sort_3numbers_in_stack(a);
 	while (*b != NULL)
 		pa(b, a, 1);
 }
@@ -63,11 +63,11 @@ void	push_swap(t_stack **a, t_stack **b, long *tab)
 {
 	len(*a);
 	if ((*a)->len == 2)
-		sort_numer_2(a);
+		sort_2numbers_in_stack(a);
 	else if ((*a)->len == 3)
-		sort_numer_3(a);
+		sort_3numbers_in_stack(a);
 	else if ((*a)->len == 5)
-		sort_numer_5(a, b);
+		sort_5numbers_in_stack(a, b);
 	else
-		sort_numer(a, b, tab, (*a)->len - 1);
+		sort_numbers(a, b, tab, (*a)->len - 1);
 }

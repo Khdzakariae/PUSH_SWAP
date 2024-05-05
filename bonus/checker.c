@@ -6,13 +6,13 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:08:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2024/05/04 12:31:56 by zel-khad         ###   ########.fr       */
+/*   Updated: 2024/05/05 12:50:32 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	cheacker_sort(t_stack **head)
+void	check_sorting(t_stack **head)
 {
 	t_stack	*tmp;
 
@@ -31,7 +31,7 @@ void	cheacker_sort(t_stack **head)
 	return ;
 }
 
-void	checker_generate(t_stack **a, t_stack **b, char *str)
+void	checker_generate_commands(t_stack **a, t_stack **b, char *str)
 {
 	if (ft_strcmp(str, "pa\n") == 0)
 		pa(b, a, 0);
@@ -56,17 +56,17 @@ void	checker_generate(t_stack **a, t_stack **b, char *str)
 	else if (ft_strcmp(str, "ss\n") == 0)
 		ss(a, b, 0);
 	else
-		_checker_error(a, b, str);
+		handle_checker_error(a, b, str);
 }
 
-void	checker(t_stack **a, t_stack **b)
+void	checker_program(t_stack **a, t_stack **b)
 {
 	char	*str;
 
 	str = get_next_line(0);
 	while (str)
 	{
-		checker_generate(a, b, str);
+		checker_generate_commands(a, b, str);
 		free(str);
 		str = get_next_line(0);
 	}
@@ -75,7 +75,7 @@ void	checker(t_stack **a, t_stack **b)
 		ft_printf("KO\n");
 		return ;
 	}
-	cheacker_sort(a);
+	check_sorting(a);
 }
 
 int	main(int ac, char **av)
@@ -87,9 +87,9 @@ int	main(int ac, char **av)
 	b = NULL;
 	if (ac > 1)
 	{
-		_push(&a, ac, av);
-		parrss(&a, 0);
-		checker(&a, &b);
+		add_element_stack(&a, ac, av);
+		parse_stack(&a, 0);
+		checker_program(&a, &b);
 		free_stack(&a);
 	}
 	else
